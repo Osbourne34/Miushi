@@ -1,0 +1,105 @@
+.footer {
+    padding-bottom: 55px;
+    background-color: #1a2d34;
+    .accordion__input {
+        appearance: none;
+        position: absolute;
+
+    }
+    .accordion__input:checked ~ .accordion__list{
+        transform: scaleY(1);
+        height: auto;
+    }
+    .accordion__input:checked ~ .accordion__section:before{
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .accordion__section {
+        @include font(16px, $colorWhite, $OpenSans);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        min-height: 65px;
+        border-bottom: 2px solid rgba(255,255,255, 0.1);
+        padding-left: 15px;
+        position: relative;
+        &:before {
+            content: '\f107';
+            @include font(30px, $colorWhite, 'icomoon');
+            font-weight: 300;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+            right: 15px;
+            transition: .3s;
+        }
+    }
+    .accordion__list {
+        transform: scaleY(0);
+        transform-origin: top;
+        overflow: hidden;
+        height: 0;
+        transition: .3s;
+        background-color: #20353d;
+        width: 100%;
+        padding-left: 15px;
+    }
+    .list__item {
+        @include font(12px, #6b96a5, $OpenSans);
+        padding: 12px 0;
+        transition: .3s;
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__bottom {
+        @include flex(flex-start,center,column);
+        margin-top: 45px;
+    }
+    &__socials {
+        display: flex;
+        margin-bottom: 45px;
+    }
+    .socials__link {
+        &:before {
+            @include font(16px, #1a2d34, 'icomoon');
+            line-height: 23px;
+            text-align: center;
+
+            display: block;
+            margin: 0 5px;
+
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+    }
+    .socials__link_facebook:before {
+        content: '\f09a';
+    }
+    .socials__link_instagram:before {
+        content: '\f16d';
+    }
+    .socials__link_vk:before {
+        content: '\f189';
+    }
+    &__agreement,
+    &__copyright {
+        text-align: center;
+        @include font(12px, #6b96a5, $OpenSans);
+    }
+    &__agreement {
+        border-bottom: 1px solid #6b96a5;
+        margin-bottom: 40px;
+    }
+    &__copyright {
+        text-transform: uppercase;
+    }
+}

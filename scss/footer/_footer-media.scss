@@ -1,0 +1,85 @@
+.footer {
+    padding-bottom: 40px;
+    @media (min-width: 768px) {
+        &__bottom {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding: 0 15px;
+            margin-top: 40px;
+        }
+        &__socials {
+            margin: 0;
+        }
+        &__agreement {
+            margin: 0;
+        }
+    }
+    @media (max-width: 1169px) {
+        .container {
+            max-width: 100%;
+            padding: 0;
+        }
+        &__wrap {
+            display: none;
+        }
+    }
+    @media (min-width: 1170px) {
+        padding-top: 75px;
+        padding-bottom: 65px;
+        &__accordion {
+            display: none;
+        }
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 55px;
+        }
+        &__title {
+            @include font(14px, $colorWhite, $OpenSans);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        .menu__item {
+            @include font(14px, $colorWhite, $OpenSans);
+            font-weight: 500;
+            margin-bottom: 9px;
+        }
+        &__inner {
+            display: flex;
+        }
+        &__list-left {
+            max-width: 200px;
+            margin-right: 25px;
+        }
+        &__item {
+            @include font(12px, #6b96a5, $OpenSans);
+            line-height: 1.5;
+            transition: .3s;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &__item + &__item {
+            margin-top: 10px;
+        }
+        &__bottom {
+            margin: 0;
+            padding: 0;
+        }
+        .socials__link {
+            &:before {
+                margin: 0 10px;
+                line-height: 28px;
+                font-size: 20px;
+                width: 28px;
+                height: 28px;
+                background-color: rgba(255,255,255,0.5);
+                transition: .3s;
+            }
+            &:hover:before {
+                background-color: #fff;
+            }
+        }
+    }
+}

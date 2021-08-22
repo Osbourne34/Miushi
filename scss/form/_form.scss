@@ -1,0 +1,63 @@
+.form {
+    padding: 55px 0;
+    background-image: url('../img/form-bg-320px.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__wrap {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    &__question {
+        @include font(16px, $colorWhite, $OpenSans);
+        line-height: 2.7;
+    }
+    &__title {
+        @include font(44px, $colorWhite, $LemonTuesday);
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    &__input {
+        @include font(14px, $colorWhite, $OpenSans);
+        padding: 12px 0;
+        width: 100%;
+
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        border-bottom: 1px solid #fff;
+
+        transition: .3s;
+        &:focus {
+            background-color: rgba(255,255,255, 0.1)
+        }
+    }
+    &__input + &__input {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        @include font(14px, $colorWhite, $OpenSans);
+        font-weight: 600;
+        text-transform: uppercase;
+
+        width: 100%;
+        padding: 16px 0;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        background-color: $colorOrange;
+
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background-color: #fff;
+            color: $colorOrange;
+        }
+    }
+    &__text {
+        @include font(12px, $colorWhite, $OpenSans);
+    }
+}

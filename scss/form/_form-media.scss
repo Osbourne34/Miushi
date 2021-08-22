@@ -1,0 +1,48 @@
+.form {
+    @media (min-width: 768px) {
+        padding: 77px 0 85px;
+        background-image: url('../img/form-bg-768px.jpg');
+        &__wrap {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        &__question {
+            line-height: 1;
+        }
+        &__title {
+            font-size: 54px;
+            margin-bottom: 20px;
+        }
+        &__group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+        &__input + &__input {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        &__input {
+            margin-right: 30px;
+        }
+        &__btn {
+            margin-bottom: 0;
+        }
+    }
+    @media (min-width: 992px) {
+        &__wrap {
+            max-width: 80%;
+            margin: 0 0 0 auto;
+        }
+    }
+    @media (min-width: 1170px) {
+        background-image: url('../img/form-bg-1170px.jpg');
+        &__wrap {
+            max-width: 70%;
+        }
+        &__input {
+            margin-right: 45px;
+        }
+    }
+}
